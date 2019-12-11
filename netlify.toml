@@ -1,0 +1,13 @@
+[build]
+  publish = "build"
+
+[context.develop]
+  command = "npm run build-test"
+
+[context.production]
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
